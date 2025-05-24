@@ -1,0 +1,521 @@
+=============== May 14, 2025 (+07) ===============
+16:49:10.897449 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:49:10.922591 db@open opening
+16:49:10.922887 version@stat F·[] S·0B[] Sc·[]
+16:49:10.930424 db@janitor F·2 G·0
+16:49:10.930442 db@open done T·7.83327ms
+=============== May 14, 2025 (+07) ===============
+16:52:45.618652 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:52:45.618738 version@stat F·[] S·0B[] Sc·[]
+16:52:45.618748 db@open opening
+16:52:45.618772 journal@recovery F·1
+16:52:45.618947 journal@recovery recovering @1
+16:52:45.629528 memdb@flush created L0@2 N·1 S·126B "las..ock,v1":"las..ock,v1"
+16:52:45.629660 version@stat F·[1] S·126B[126B] Sc·[0.25]
+16:52:45.658778 db@janitor F·3 G·0
+16:52:45.658792 db@open done T·40.03837ms
+=============== May 14, 2025 (+07) ===============
+16:55:32.650437 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:55:32.650547 version@stat F·[1] S·126B[126B] Sc·[0.25]
+16:55:32.650563 db@open opening
+16:55:32.650593 journal@recovery F·1
+16:55:32.650729 journal@recovery recovering @3
+16:55:32.661465 memdb@flush created L0@5 N·1 S·126B "las..ock,v3":"las..ock,v3"
+16:55:32.661586 version@stat F·[2] S·252B[252B] Sc·[0.50]
+16:55:32.696125 db@janitor F·4 G·0
+16:55:32.696142 db@open done T·45.571938ms
+=============== May 16, 2025 (+07) ===============
+11:21:00.277562 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:21:00.277672 version@stat F·[2] S·252B[252B] Sc·[0.50]
+11:21:00.277695 db@open opening
+11:21:00.277717 journal@recovery F·1
+11:21:00.278995 journal@recovery recovering @6
+11:21:00.289642 memdb@flush created L0@8 N·15 S·236B "las..ock,v19":"las..ock,v5"
+11:21:00.289736 version@stat F·[3] S·488B[488B] Sc·[0.75]
+11:21:00.319077 db@janitor F·5 G·0
+11:21:00.319100 db@open done T·41.399413ms
+=============== May 16, 2025 (+07) ===============
+14:17:02.723736 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:17:02.723994 version@stat F·[3] S·488B[488B] Sc·[0.75]
+14:17:02.724008 db@open opening
+14:17:02.724033 journal@recovery F·1
+14:17:02.725689 journal@recovery recovering @9
+14:17:02.736558 memdb@flush created L0@11 N·1 S·126B "las..ock,v21":"las..ock,v21"
+14:17:02.736689 version@stat F·[4] S·614B[614B] Sc·[1.00]
+14:17:02.767953 db@janitor F·6 G·0
+14:17:02.767975 db@open done T·43.959602ms
+14:17:02.768052 table@compaction L0·4 -> L1·0 S·614B Q·22
+14:17:02.776085 table@build created L1@14 N·1 S·126B "las..ock,v21":"las..ock,v21"
+14:17:02.776131 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+14:17:02.790454 table@compaction committed F-3 S-488B Ke·0 D·17 T·22.382316ms
+14:17:02.790548 table@remove removed @8
+14:17:02.790579 table@remove removed @5
+14:17:02.790608 table@remove removed @2
+=============== May 16, 2025 (+07) ===============
+16:22:11.055015 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:22:11.055466 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+16:22:11.055480 db@open opening
+16:22:11.055504 journal@recovery F·1
+16:22:11.055674 journal@recovery recovering @12
+16:22:11.071123 memdb@flush created L0@15 N·1 S·126B "las..ock,v23":"las..ock,v23"
+16:22:11.071221 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+16:22:11.101549 db@janitor F·5 G·1
+16:22:11.101565 db@janitor removing table-11
+16:22:11.101594 db@open done T·46.109667ms
+=============== May 16, 2025 (+07) ===============
+16:22:25.656075 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:22:25.656216 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+16:22:25.656241 db@open opening
+16:22:25.656274 journal@recovery F·1
+16:22:25.657710 journal@recovery recovering @16
+16:22:25.658107 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+16:22:25.691887 db@janitor F·4 G·0
+16:22:25.691927 db@open done T·35.676371ms
+=============== May 16, 2025 (+07) ===============
+16:22:37.774313 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:22:37.774446 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+16:22:37.774462 db@open opening
+16:22:37.774500 journal@recovery F·1
+16:22:37.774781 journal@recovery recovering @18
+16:22:37.785479 memdb@flush created L0@20 N·1 S·126B "las..ock,v25":"las..ock,v25"
+16:22:37.785572 version@stat F·[2 1] S·378B[252B 126B] Sc·[0.50 0.00]
+16:22:37.815286 db@janitor F·5 G·0
+16:22:37.815311 db@open done T·40.832992ms
+=============== May 16, 2025 (+07) ===============
+16:24:18.429396 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:24:18.429493 version@stat F·[2 1] S·378B[252B 126B] Sc·[0.50 0.00]
+16:24:18.429516 db@open opening
+16:24:18.429542 journal@recovery F·1
+16:24:18.429740 journal@recovery recovering @21
+16:24:18.430106 version@stat F·[2 1] S·378B[252B 126B] Sc·[0.50 0.00]
+16:24:18.462361 db@janitor F·5 G·0
+16:24:18.462374 db@open done T·32.853704ms
+=============== May 19, 2025 (+07) ===============
+09:12:24.227406 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:12:24.228541 version@stat F·[2 1] S·378B[252B 126B] Sc·[0.50 0.00]
+09:12:24.228554 db@open opening
+09:12:24.228580 journal@recovery F·1
+09:12:24.228779 journal@recovery recovering @23
+09:12:24.247253 memdb@flush created L0@25 N·12 S·216B "las..ock,v38":"las..ock,v27"
+09:12:24.247392 version@stat F·[3 1] S·594B[468B 126B] Sc·[0.75 0.00]
+09:12:24.277442 db@janitor F·6 G·0
+09:12:24.277461 db@open done T·48.89647ms
+=============== May 19, 2025 (+07) ===============
+09:27:55.968175 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:27:55.968327 version@stat F·[3 1] S·594B[468B 126B] Sc·[0.75 0.00]
+09:27:55.968340 db@open opening
+09:27:55.968366 journal@recovery F·1
+09:27:55.968576 journal@recovery recovering @26
+09:27:55.981864 memdb@flush created L0@28 N·5 S·160B "las..ock,v44":"las..ock,v40"
+09:27:55.981976 version@stat F·[4 1] S·754B[628B 126B] Sc·[1.00 0.00]
+09:27:56.012720 db@janitor F·7 G·0
+09:27:56.012733 db@open done T·44.387777ms
+09:27:56.012811 table@compaction L0·4 -> L1·1 S·754B Q·45
+09:27:56.021737 table@build created L1@31 N·1 S·126B "las..ock,v44":"las..ock,v44"
+09:27:56.021771 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+09:27:56.029592 table@compaction committed F-4 S-628B Ke·0 D·19 T·16.762381ms
+09:27:56.029655 table@remove removed @25
+09:27:56.029826 table@remove removed @20
+09:27:56.029949 table@remove removed @15
+09:27:56.030096 table@remove removed @14
+=============== May 19, 2025 (+07) ===============
+09:30:07.017590 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:07.017784 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+09:30:07.017812 db@open opening
+09:30:07.017857 journal@recovery F·1
+09:30:07.018079 journal@recovery recovering @29
+09:30:07.025984 memdb@flush created L0@32 N·2 S·138B "las..ock,v47":"las..ock,v46"
+09:30:07.026077 version@stat F·[1 1] S·264B[138B 126B] Sc·[0.25 0.00]
+09:30:07.070028 db@janitor F·5 G·1
+09:30:07.070042 db@janitor removing table-28
+09:30:07.070081 db@open done T·52.261497ms
+=============== May 19, 2025 (+07) ===============
+09:33:42.792576 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:33:42.792684 version@stat F·[1 1] S·264B[138B 126B] Sc·[0.25 0.00]
+09:33:42.792704 db@open opening
+09:33:42.792738 journal@recovery F·1
+09:33:42.792947 journal@recovery recovering @33
+09:33:42.803824 memdb@flush created L0@35 N·4 S·154B "las..ock,v52":"las..ock,v49"
+09:33:42.803944 version@stat F·[2 1] S·418B[292B 126B] Sc·[0.50 0.00]
+09:33:42.838748 db@janitor F·5 G·0
+09:33:42.838764 db@open done T·46.055238ms
+=============== May 19, 2025 (+07) ===============
+09:46:19.988941 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:46:19.989094 version@stat F·[2 1] S·418B[292B 126B] Sc·[0.50 0.00]
+09:46:19.989109 db@open opening
+09:46:19.989146 journal@recovery F·1
+09:46:19.989347 journal@recovery recovering @36
+09:46:19.999992 memdb@flush created L0@38 N·2 S·138B "las..ock,v55":"las..ock,v54"
+09:46:20.000089 version@stat F·[3 1] S·556B[430B 126B] Sc·[0.75 0.00]
+09:46:20.037695 db@janitor F·6 G·0
+09:46:20.037720 db@open done T·48.594634ms
+=============== May 19, 2025 (+07) ===============
+09:56:58.623736 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:56:58.623848 version@stat F·[3 1] S·556B[430B 126B] Sc·[0.75 0.00]
+09:56:58.623859 db@open opening
+09:56:58.623882 journal@recovery F·1
+09:56:58.625355 journal@recovery recovering @39
+09:56:58.636506 memdb@flush created L0@41 N·1 S·126B "las..ock,v57":"las..ock,v57"
+09:56:58.636586 version@stat F·[4 1] S·682B[556B 126B] Sc·[1.00 0.00]
+09:56:58.667841 db@janitor F·7 G·0
+09:56:58.667865 db@open done T·43.994098ms
+09:56:58.667959 table@compaction L0·4 -> L1·1 S·682B Q·58
+09:56:58.676508 table@build created L1@44 N·1 S·126B "las..ock,v57":"las..ock,v57"
+09:56:58.676560 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+09:56:58.684300 table@compaction committed F-4 S-556B Ke·0 D·9 T·16.31927ms
+09:56:58.684406 table@remove removed @38
+09:56:58.684435 table@remove removed @35
+09:56:58.684450 table@remove removed @32
+09:56:58.684465 table@remove removed @31
+=============== May 19, 2025 (+07) ===============
+09:58:17.086770 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:58:17.086887 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+09:58:17.086901 db@open opening
+09:58:17.086931 journal@recovery F·1
+09:58:17.087160 journal@recovery recovering @42
+09:58:17.097967 memdb@flush created L0@45 N·1 S·126B "las..ock,v59":"las..ock,v59"
+09:58:17.098070 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+09:58:17.127846 db@janitor F·5 G·1
+09:58:17.127855 db@janitor removing table-41
+09:58:17.127877 db@open done T·40.970215ms
+=============== May 19, 2025 (+07) ===============
+09:58:43.335910 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:58:43.336045 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+09:58:43.336061 db@open opening
+09:58:43.336090 journal@recovery F·1
+09:58:43.336331 journal@recovery recovering @46
+09:58:43.346909 memdb@flush created L0@48 N·2 S·138B "las..ock,v62":"las..ock,v61"
+09:58:43.347016 version@stat F·[2 1] S·390B[264B 126B] Sc·[0.50 0.00]
+09:58:43.377398 db@janitor F·5 G·0
+09:58:43.377417 db@open done T·41.349746ms
+=============== May 19, 2025 (+07) ===============
+10:03:19.280469 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:03:19.280616 version@stat F·[2 1] S·390B[264B 126B] Sc·[0.50 0.00]
+10:03:19.280632 db@open opening
+10:03:19.280675 journal@recovery F·1
+10:03:19.282092 journal@recovery recovering @49
+10:03:19.292812 memdb@flush created L0@51 N·2 S·138B "las..ock,v65":"las..ock,v64"
+10:03:19.292896 version@stat F·[3 1] S·528B[402B 126B] Sc·[0.75 0.00]
+10:03:19.323071 db@janitor F·6 G·0
+10:03:19.323089 db@open done T·42.449487ms
+=============== May 19, 2025 (+07) ===============
+10:25:21.094419 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:25:21.094546 version@stat F·[3 1] S·528B[402B 126B] Sc·[0.75 0.00]
+10:25:21.094557 db@open opening
+10:25:21.094581 journal@recovery F·1
+10:25:21.094791 journal@recovery recovering @52
+10:25:21.105465 memdb@flush created L0@54 N·2 S·138B "las..ock,v68":"las..ock,v67"
+10:25:21.105620 version@stat F·[4 1] S·666B[540B 126B] Sc·[1.00 0.00]
+10:25:21.135322 db@janitor F·7 G·0
+10:25:21.135341 db@open done T·40.777016ms
+10:25:21.135425 table@compaction L0·4 -> L1·1 S·666B Q·69
+10:25:21.143748 table@build created L1@57 N·1 S·126B "las..ock,v68":"las..ock,v68"
+10:25:21.143777 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+10:25:21.151055 table@compaction committed F-4 S-540B Ke·0 D·7 T·15.60942ms
+10:25:21.151192 table@remove removed @51
+10:25:21.151217 table@remove removed @48
+10:25:21.151250 table@remove removed @45
+10:25:21.151281 table@remove removed @44
+=============== May 19, 2025 (+07) ===============
+11:26:01.552620 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:26:01.552916 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+11:26:01.552948 db@open opening
+11:26:01.552997 journal@recovery F·1
+11:26:01.553320 journal@recovery recovering @55
+11:26:01.568612 memdb@flush created L0@58 N·11 S·209B "las..ock,v80":"las..ock,v70"
+11:26:01.568733 version@stat F·[1 1] S·335B[209B 126B] Sc·[0.25 0.00]
+11:26:01.598626 db@janitor F·5 G·1
+11:26:01.598642 db@janitor removing table-54
+11:26:01.598669 db@open done T·45.715067ms
+=============== May 19, 2025 (+07) ===============
+11:58:53.473005 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:58:53.473132 version@stat F·[1 1] S·335B[209B 126B] Sc·[0.25 0.00]
+11:58:53.473145 db@open opening
+11:58:53.473169 journal@recovery F·1
+11:58:53.474538 journal@recovery recovering @59
+11:58:53.484957 memdb@flush created L0@61 N·9 S·194B "las..ock,v90":"las..ock,v82"
+11:58:53.485058 version@stat F·[2 1] S·529B[403B 126B] Sc·[0.50 0.00]
+11:58:53.515371 db@janitor F·5 G·0
+11:58:53.515388 db@open done T·42.237129ms
+=============== May 19, 2025 (+07) ===============
+12:00:45.313965 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:00:45.314094 version@stat F·[2 1] S·529B[403B 126B] Sc·[0.50 0.00]
+12:00:45.314109 db@open opening
+12:00:45.314149 journal@recovery F·1
+12:00:45.314329 journal@recovery recovering @62
+12:00:45.325783 memdb@flush created L0@64 N·2 S·138B "las..ock,v93":"las..ock,v92"
+12:00:45.325894 version@stat F·[3 1] S·667B[541B 126B] Sc·[0.75 0.00]
+12:00:45.357398 db@janitor F·6 G·0
+12:00:45.357417 db@open done T·43.29564ms
+=============== May 19, 2025 (+07) ===============
+14:09:49.611958 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:09:49.612698 version@stat F·[3 1] S·667B[541B 126B] Sc·[0.75 0.00]
+14:09:49.612714 db@open opening
+14:09:49.612742 journal@recovery F·1
+14:09:49.612897 journal@recovery recovering @65
+14:09:49.624703 memdb@flush created L0@67 N·2 S·138B "las..ock,v96":"las..ock,v95"
+14:09:49.625096 version@stat F·[4 1] S·805B[679B 126B] Sc·[1.00 0.00]
+14:09:49.654977 db@janitor F·7 G·0
+14:09:49.654993 db@open done T·42.272543ms
+14:09:49.655108 table@compaction L0·4 -> L1·1 S·805B Q·97
+14:09:49.663976 table@build created L1@70 N·1 S·126B "las..ock,v96":"las..ock,v96"
+14:09:49.664011 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+14:09:49.671307 table@compaction committed F-4 S-679B Ke·0 D·24 T·16.171638ms
+14:09:49.671380 table@remove removed @64
+14:09:49.671398 table@remove removed @61
+14:09:49.671533 table@remove removed @58
+14:09:49.671570 table@remove removed @57
+=============== May 19, 2025 (+07) ===============
+14:24:19.405648 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:24:19.406157 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+14:24:19.406180 db@open opening
+14:24:19.406223 journal@recovery F·1
+14:24:19.407699 journal@recovery recovering @68
+14:24:19.418014 memdb@flush created L0@71 N·2 S·138B "las..ock,v99":"las..ock,v98"
+14:24:19.418130 version@stat F·[1 1] S·264B[138B 126B] Sc·[0.25 0.00]
+14:24:19.448288 db@janitor F·5 G·1
+14:24:19.448315 db@janitor removing table-67
+14:24:19.448362 db@open done T·42.166638ms
+=============== May 19, 2025 (+07) ===============
+14:50:35.001048 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:50:35.001985 version@stat F·[1 1] S·264B[138B 126B] Sc·[0.25 0.00]
+14:50:35.002009 db@open opening
+14:50:35.002047 journal@recovery F·1
+14:50:35.003777 journal@recovery recovering @72
+14:50:35.015984 memdb@flush created L0@74 N·8 S·186B "las..ock,v108":"las..ock,v101"
+14:50:35.016530 version@stat F·[2 1] S·450B[324B 126B] Sc·[0.50 0.00]
+14:50:35.047770 db@janitor F·5 G·0
+14:50:35.047825 db@open done T·45.773434ms
+=============== May 19, 2025 (+07) ===============
+15:00:21.057609 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:00:21.058169 version@stat F·[2 1] S·450B[324B 126B] Sc·[0.50 0.00]
+15:00:21.058188 db@open opening
+15:00:21.058228 journal@recovery F·1
+15:00:21.058395 journal@recovery recovering @75
+15:00:21.070047 memdb@flush created L0@77 N·7 S·177B "las..ock,v116":"las..ock,v110"
+15:00:21.070216 version@stat F·[3 1] S·627B[501B 126B] Sc·[0.75 0.00]
+15:00:21.100223 db@janitor F·6 G·0
+15:00:21.100247 db@open done T·42.050619ms
+=============== May 19, 2025 (+07) ===============
+15:04:34.072348 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:04:34.072751 version@stat F·[3 1] S·627B[501B 126B] Sc·[0.75 0.00]
+15:04:34.072772 db@open opening
+15:04:34.072813 journal@recovery F·1
+15:04:34.072957 journal@recovery recovering @78
+15:04:34.073388 version@stat F·[3 1] S·627B[501B 126B] Sc·[0.75 0.00]
+15:04:34.105656 db@janitor F·6 G·0
+15:04:34.105692 db@open done T·32.900767ms
+=============== May 19, 2025 (+07) ===============
+15:05:32.656058 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:05:32.656187 version@stat F·[3 1] S·627B[501B 126B] Sc·[0.75 0.00]
+15:05:32.656200 db@open opening
+15:05:32.656229 journal@recovery F·1
+15:05:32.656411 journal@recovery recovering @80
+15:05:32.667398 memdb@flush created L0@82 N·1 S·126B "las..ock,v118":"las..ock,v118"
+15:05:32.667534 version@stat F·[4 1] S·753B[627B 126B] Sc·[1.00 0.00]
+15:05:32.696982 db@janitor F·7 G·0
+15:05:32.697001 db@open done T·40.793984ms
+15:05:32.697024 table@compaction L0·4 -> L1·1 S·753B Q·119
+15:05:32.705313 table@build created L1@85 N·1 S·126B "las..ock,v118":"las..ock,v118"
+15:05:32.705381 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+15:05:32.712765 table@compaction committed F-4 S-627B Ke·0 D·18 T·15.714352ms
+15:05:32.712869 table@remove removed @77
+15:05:32.713001 table@remove removed @74
+15:05:32.713022 table@remove removed @71
+15:05:32.713146 table@remove removed @70
+=============== May 19, 2025 (+07) ===============
+15:09:11.649797 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:09:11.650506 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+15:09:11.650525 db@open opening
+15:09:11.650564 journal@recovery F·1
+15:09:11.650704 journal@recovery recovering @83
+15:09:11.667613 memdb@flush created L0@86 N·2 S·138B "las..ock,v121":"las..ock,v120"
+15:09:11.667770 version@stat F·[1 1] S·264B[138B 126B] Sc·[0.25 0.00]
+15:09:11.699160 db@janitor F·5 G·1
+15:09:11.699177 db@janitor removing table-82
+15:09:11.699345 db@open done T·48.812035ms
+=============== May 19, 2025 (+07) ===============
+15:11:32.956182 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:11:32.956570 version@stat F·[1 1] S·264B[138B 126B] Sc·[0.25 0.00]
+15:11:32.956592 db@open opening
+15:11:32.956628 journal@recovery F·1
+15:11:32.956812 journal@recovery recovering @87
+15:11:32.970504 memdb@flush created L0@89 N·1 S·126B "las..ock,v123":"las..ock,v123"
+15:11:32.970659 version@stat F·[2 1] S·390B[264B 126B] Sc·[0.50 0.00]
+15:11:33.000226 db@janitor F·5 G·0
+15:11:33.000246 db@open done T·43.646747ms
+=============== May 19, 2025 (+07) ===============
+15:15:12.112695 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:15:12.113061 version@stat F·[2 1] S·390B[264B 126B] Sc·[0.50 0.00]
+15:15:12.113075 db@open opening
+15:15:12.113108 journal@recovery F·1
+15:15:12.114779 journal@recovery recovering @90
+15:15:12.122952 memdb@flush created L0@92 N·2 S·138B "las..ock,v126":"las..ock,v125"
+15:15:12.123096 version@stat F·[3 1] S·528B[402B 126B] Sc·[0.75 0.00]
+15:15:12.154105 db@janitor F·6 G·0
+15:15:12.154140 db@open done T·41.045156ms
+=============== May 19, 2025 (+07) ===============
+15:17:08.087219 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:17:08.088143 version@stat F·[3 1] S·528B[402B 126B] Sc·[0.75 0.00]
+15:17:08.088159 db@open opening
+15:17:08.088186 journal@recovery F·1
+15:17:08.088321 journal@recovery recovering @93
+15:17:08.098527 memdb@flush created L0@95 N·1 S·126B "las..ock,v128":"las..ock,v128"
+15:17:08.098668 version@stat F·[4 1] S·654B[528B 126B] Sc·[1.00 0.00]
+15:17:08.128106 db@janitor F·7 G·0
+15:17:08.128133 db@open done T·39.966851ms
+15:17:08.128190 table@compaction L0·4 -> L1·1 S·654B Q·129
+15:17:08.137594 table@build created L1@98 N·1 S·126B "las..ock,v128":"las..ock,v128"
+15:17:08.137633 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+15:17:08.145072 table@compaction committed F-4 S-528B Ke·0 D·6 T·16.858284ms
+15:17:08.145202 table@remove removed @92
+15:17:08.145222 table@remove removed @89
+15:17:08.145534 table@remove removed @86
+15:17:08.145555 table@remove removed @85
+=============== May 19, 2025 (+07) ===============
+15:22:01.705814 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:22:01.706767 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+15:22:01.706781 db@open opening
+15:22:01.706806 journal@recovery F·1
+15:22:01.708288 journal@recovery recovering @96
+15:22:01.718912 memdb@flush created L0@99 N·1 S·126B "las..ock,v130":"las..ock,v130"
+15:22:01.719106 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+15:22:01.748184 db@janitor F·5 G·1
+15:22:01.748197 db@janitor removing table-95
+15:22:01.748232 db@open done T·41.446446ms
+=============== May 19, 2025 (+07) ===============
+15:47:24.958926 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:47:24.959810 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+15:47:24.959827 db@open opening
+15:47:24.959859 journal@recovery F·1
+15:47:24.960088 journal@recovery recovering @100
+15:47:24.971627 memdb@flush created L0@102 N·1 S·126B "las..ock,v132":"las..ock,v132"
+15:47:24.972171 version@stat F·[2 1] S·378B[252B 126B] Sc·[0.50 0.00]
+15:47:25.002856 db@janitor F·5 G·0
+15:47:25.002875 db@open done T·43.040578ms
+=============== May 19, 2025 (+07) ===============
+15:49:18.925550 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:49:18.927455 version@stat F·[2 1] S·378B[252B 126B] Sc·[0.50 0.00]
+15:49:18.927493 db@open opening
+15:49:18.927569 journal@recovery F·1
+15:49:18.927927 journal@recovery recovering @103
+15:49:18.943377 memdb@flush created L0@105 N·1 S·126B "las..ock,v134":"las..ock,v134"
+15:49:18.943955 version@stat F·[3 1] S·504B[378B 126B] Sc·[0.75 0.00]
+15:49:18.974703 db@janitor F·6 G·0
+15:49:18.974750 db@open done T·47.230117ms
+=============== May 19, 2025 (+07) ===============
+15:50:30.249934 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:50:30.251134 version@stat F·[3 1] S·504B[378B 126B] Sc·[0.75 0.00]
+15:50:30.251153 db@open opening
+15:50:30.251189 journal@recovery F·1
+15:50:30.251475 journal@recovery recovering @106
+15:50:30.262364 memdb@flush created L0@108 N·2 S·138B "las..ock,v137":"las..ock,v136"
+15:50:30.262485 version@stat F·[4 1] S·642B[516B 126B] Sc·[1.00 0.00]
+15:50:30.292222 db@janitor F·7 G·0
+15:50:30.292245 db@open done T·41.084824ms
+15:50:30.292431 table@compaction L0·4 -> L1·1 S·642B Q·138
+15:50:30.301161 table@build created L1@111 N·1 S·126B "las..ock,v137":"las..ock,v137"
+15:50:30.301205 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+15:50:30.308399 table@compaction committed F-4 S-516B Ke·0 D·5 T·15.9445ms
+15:50:30.308772 table@remove removed @105
+15:50:30.309126 table@remove removed @102
+15:50:30.309602 table@remove removed @99
+15:50:30.309760 table@remove removed @98
+=============== May 19, 2025 (+07) ===============
+15:52:46.448975 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:52:46.450102 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+15:52:46.450139 db@open opening
+15:52:46.450177 journal@recovery F·1
+15:52:46.450351 journal@recovery recovering @109
+15:52:46.461715 memdb@flush created L0@112 N·1 S·126B "las..ock,v139":"las..ock,v139"
+15:52:46.462277 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+15:52:46.492290 db@janitor F·5 G·1
+15:52:46.492307 db@janitor removing table-108
+15:52:46.492344 db@open done T·42.195309ms
+=============== May 19, 2025 (+07) ===============
+16:09:16.960387 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:09:16.960942 version@stat F·[1 1] S·252B[126B 126B] Sc·[0.25 0.00]
+16:09:16.960963 db@open opening
+16:09:16.960996 journal@recovery F·1
+16:09:16.961225 journal@recovery recovering @113
+16:09:16.970492 memdb@flush created L0@115 N·5 S·161B "las..ock,v145":"las..ock,v141"
+16:09:16.970679 version@stat F·[2 1] S·413B[287B 126B] Sc·[0.50 0.00]
+16:09:17.000863 db@janitor F·5 G·0
+16:09:17.000883 db@open done T·39.911794ms
+=============== May 20, 2025 (+07) ===============
+14:05:46.300074 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:05:46.300191 version@stat F·[2 1] S·413B[287B 126B] Sc·[0.50 0.00]
+14:05:46.300205 db@open opening
+14:05:46.300250 journal@recovery F·1
+14:05:46.300414 journal@recovery recovering @116
+14:05:46.315152 memdb@flush created L0@118 N·5 S·161B "las..ock,v151":"las..ock,v147"
+14:05:46.315244 version@stat F·[3 1] S·574B[448B 126B] Sc·[0.75 0.00]
+14:05:46.344787 db@janitor F·6 G·0
+14:05:46.344809 db@open done T·44.591763ms
+=============== May 20, 2025 (+07) ===============
+14:25:02.279826 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:25:02.279995 version@stat F·[3 1] S·574B[448B 126B] Sc·[0.75 0.00]
+14:25:02.280013 db@open opening
+14:25:02.280045 journal@recovery F·1
+14:25:02.280248 journal@recovery recovering @119
+14:25:02.292809 memdb@flush created L0@121 N·7 S·177B "las..ock,v159":"las..ock,v153"
+14:25:02.292981 version@stat F·[4 1] S·751B[625B 126B] Sc·[1.00 0.00]
+14:25:02.323597 db@janitor F·7 G·0
+14:25:02.323632 db@open done T·43.607853ms
+14:25:02.323703 table@compaction L0·4 -> L1·1 S·751B Q·160
+14:25:02.331924 table@build created L1@124 N·1 S·126B "las..ock,v159":"las..ock,v159"
+14:25:02.332121 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+14:25:02.347408 table@compaction committed F-4 S-625B Ke·0 D·18 T·23.666076ms
+14:25:02.347551 table@remove removed @118
+14:25:02.347575 table@remove removed @115
+14:25:02.347593 table@remove removed @112
+14:25:02.347610 table@remove removed @111
+=============== May 20, 2025 (+07) ===============
+14:56:11.468815 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:56:11.468922 version@stat F·[0 1] S·126B[0B 126B] Sc·[0.00 0.00]
+14:56:11.468935 db@open opening
+14:56:11.468958 journal@recovery F·1
+14:56:11.469155 journal@recovery recovering @122
+14:56:11.480503 memdb@flush created L0@125 N·3 S·145B "las..ock,v163":"las..ock,v161"
+14:56:11.480605 version@stat F·[1 1] S·271B[145B 126B] Sc·[0.25 0.00]
+14:56:11.510173 db@janitor F·5 G·1
+14:56:11.510186 db@janitor removing table-121
+14:56:11.510227 db@open done T·41.287704ms
+=============== May 22, 2025 (+07) ===============
+09:34:31.736289 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:34:31.736844 version@stat F·[1 1] S·271B[145B 126B] Sc·[0.25 0.00]
+09:34:31.736857 db@open opening
+09:34:31.736880 journal@recovery F·1
+09:34:31.737119 journal@recovery recovering @126
+09:34:31.753168 memdb@flush created L0@128 N·119 S·931B "las..ock,v283":"las..ock,v165"
+09:34:31.753518 version@stat F·[2 1] S·1KiB[1KiB 126B] Sc·[0.50 0.00]
+09:34:31.785608 db@janitor F·5 G·0
+09:34:31.785623 db@open done T·48.760858ms
+=============== May 22, 2025 (+07) ===============
+09:41:59.870302 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:41:59.870913 version@stat F·[2 1] S·1KiB[1KiB 126B] Sc·[0.50 0.00]
+09:41:59.870931 db@open opening
+09:41:59.870971 journal@recovery F·1
+09:41:59.871145 journal@recovery recovering @129
+09:41:59.881531 memdb@flush created L0@131 N·4 S·151B "las..ock,v288":"las..ock,v285"
+09:41:59.881629 version@stat F·[3 1] S·1KiB[1KiB 126B] Sc·[0.75 0.00]
+09:41:59.910947 db@janitor F·6 G·0
+09:41:59.910962 db@open done T·40.024312ms
+=============== May 22, 2025 (+07) ===============
+09:42:41.874895 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:42:41.875396 version@stat F·[3 1] S·1KiB[1KiB 126B] Sc·[0.75 0.00]
+09:42:41.875411 db@open opening
+09:42:41.875438 journal@recovery F·1
+09:42:41.875648 journal@recovery recovering @132
+09:42:41.886496 memdb@flush created L0@134 N·1 S·127B "las..ock,v290":"las..ock,v290"
+09:42:41.886605 version@stat F·[4 1] S·1KiB[1KiB 126B] Sc·[1.00 0.00]
+09:42:41.933168 db@janitor F·7 G·0
+09:42:41.933194 db@open done T·57.772295ms
+09:42:41.933271 table@compaction L0·4 -> L1·1 S·1KiB Q·291
+09:42:41.944579 table@build created L1@137 N·1 S·127B "las..ock,v290":"las..ock,v290"
+09:42:41.944654 version@stat F·[0 1] S·127B[0B 127B] Sc·[0.00 0.00]
+09:42:41.952213 table@compaction committed F-4 S-1KiB Ke·0 D·127 T·18.907396ms
+09:42:41.952314 table@remove removed @131
+09:42:41.952511 table@remove removed @128
+09:42:41.952871 table@remove removed @125
+09:42:41.953007 table@remove removed @124

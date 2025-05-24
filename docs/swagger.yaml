@@ -1,0 +1,214 @@
+basePath: /ecom-api/v1
+definitions:
+  controller.GetReceiverNotificationsResponse:
+    properties:
+      notis:
+        items:
+          $ref: '#/definitions/model.Notification'
+        type: array
+      pagination:
+        $ref: '#/definitions/controller.Pagination'
+      total:
+        type: integer
+    type: object
+  controller.Pagination:
+    properties:
+      cur_page:
+        type: integer
+      per_page:
+        type: integer
+      total:
+        type: integer
+    type: object
+  model.Notification:
+    properties:
+      atTime:
+        type: integer
+      body:
+        type: string
+      data:
+        type: string
+      deviceToken:
+        type: string
+      eventId:
+        type: integer
+      id:
+        type: integer
+      isRead:
+        type: boolean
+      platform:
+        type: integer
+      repo:
+        type: string
+      title:
+        type: string
+      to:
+        type: string
+    type: object
+info:
+  contact:
+    name: API Support
+  description: Notification Swagger APIs.
+  title: Notification
+  version: "1.0"
+paths:
+  /noti/all:
+    get:
+      consumes:
+      - application/json
+      description: Get All Notification By Receiver, Device Token and Repo With Pagination
+      parameters:
+      - description: Receiver. Must have '0x...' prefix address
+        example: 0x0FB53F9589c8159C28370D541D96542ddd9b8Cb9
+        in: query
+        name: receiver
+        required: true
+        type: string
+      - description: Device Token
+        in: query
+        name: device_token
+        required: true
+        type: string
+      - description: Sort by 'latest' or 'oldest'
+        enum:
+        - latest
+        - oldest
+        in: query
+        name: sort
+        type: string
+      - description: '0: ALL, 1: Read, 2: Unread'
+        enum:
+        - 0
+        - 1
+        - 2
+        in: query
+        name: is_read
+        type: integer
+      - description: 'For Timekeeping: ''TIMEKEEPING'''
+        example: TIMEKEEPING
+        in: query
+        name: repo
+        required: true
+        type: string
+      - default: 1
+        description: Page number
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: Results per page
+        in: query
+        name: per_page
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.GetReceiverNotificationsResponse'
+      summary: Get All Notification
+      tags:
+      - notification
+  /noti/delete:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Notification Already Read By Id
+      parameters:
+      - description: ID Notification
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: Device Token
+        in: query
+        name: device_token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: "true"
+          schema:
+            type: boolean
+      summary: Delete Notification
+      tags:
+      - notification
+  /noti/mark_all_read:
+    post:
+      consumes:
+      - application/json
+      description: Mark All Notification Already Read By Receiver, Device Token and
+        Repo
+      parameters:
+      - description: Receiver. Must have '0x...' prefix address
+        example: 0x0FB53F9589c8159C28370D541D96542ddd9b8Cb9
+        in: query
+        name: receiver
+        required: true
+        type: string
+      - description: Device Token
+        in: query
+        name: device_token
+        required: true
+        type: string
+      - description: 'For Timekeeping: ''TIMEKEEPING'''
+        example: TIMEKEEPING
+        in: query
+        name: repo
+        required: true
+        type: string
+      responses:
+        "200":
+          description: "true"
+          schema:
+            type: boolean
+      summary: Mark All Read
+      tags:
+      - notification
+  /noti/mark_read:
+    post:
+      consumes:
+      - application/json
+      description: Mark Notification Already Read By Id
+      parameters:
+      - description: ID Notification
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: Receiver. Must have '0x...' prefix address
+        example: 0x0FB53F9589c8159C28370D541D96542ddd9b8Cb9
+        in: query
+        name: receiver
+        required: true
+        type: string
+      - description: Device Token
+        in: query
+        name: device_token
+        required: true
+        type: string
+      - description: 'For Timekeeping: ''TIMEKEEPING'''
+        example: TIMEKEEPING
+        in: query
+        name: repo
+        required: true
+        type: string
+      responses:
+        "200":
+          description: "true"
+          schema:
+            type: boolean
+      summary: Mark Read
+      tags:
+      - notification
+  /ping:
+    get:
+      description: Returns a "pong" message to indicate that the server is up
+      responses:
+        "200":
+          description: 'message: pong'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Ping the server
+swagger: "2.0"

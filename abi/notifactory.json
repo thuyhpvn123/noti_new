@@ -1,0 +1,606 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "OwnableInvalidOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "OwnableUnauthorizedAccount",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "dappOwner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "permissionManager",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "notiStorage",
+				"type": "address"
+			}
+		],
+		"name": "DappRegistered",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address[]",
+				"name": "scheduledApps",
+				"type": "address[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "DeleteNotificationScheduledApps",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256[]",
+				"name": "scheduledTimes",
+				"type": "uint256[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "DeleteNotificationScheduledTimes",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address[]",
+				"name": "apps",
+				"type": "address[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256[]",
+				"name": "scheduledTimes",
+				"type": "uint256[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "NotificationScheduled",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "dapp",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "permissionManager",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "publicKey",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "encryptedDeviceToken",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum PlatformEnum",
+				"name": "platform",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "createdAt",
+				"type": "uint256"
+			}
+		],
+		"name": "UserSubscribed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "dapp",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum PlatformEnum",
+				"name": "platform",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "createdAt",
+				"type": "uint256"
+			}
+		],
+		"name": "UserUnsubscribed",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "dappInfoList",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "dapp",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "nameDapp",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "dappList",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "dappToContracts",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "permissionManager",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "notiStorage",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "toArr",
+				"type": "address[]"
+			},
+			{
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "deleteScheduleNotiApps",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "scheduledTimes",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "deleteScheduleNotiTimes",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllDappInfos",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "dapp",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "nameDapp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct NotiFactory.DappInfo[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllDapps",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "dappOwner",
+				"type": "address"
+			}
+		],
+		"name": "getDappContracts",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			},
+			{
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "getScheduledNotiApps",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			},
+			{
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "getScheduledNotiTimes",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "toArr",
+				"type": "address[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "scheduledTimes",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint8",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "insertScheduleNoti",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "notiHub",
+		"outputs": [
+			{
+				"internalType": "contract NotiHub",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "service",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "nameDapp",
+				"type": "string"
+			}
+		],
+		"name": "registerDapp",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_notiHub",
+				"type": "address"
+			}
+		],
+		"name": "setNotiHub",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "dappOwner",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "publicKey",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "encryptedDeviceToken",
+				"type": "bytes"
+			},
+			{
+				"internalType": "enum PlatformEnum",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "subscribeUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "dappOwner",
+				"type": "address"
+			},
+			{
+				"internalType": "enum PlatformEnum",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "unSubscribeUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "service",
+				"type": "address"
+			}
+		],
+		"name": "unregisterDapp",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
