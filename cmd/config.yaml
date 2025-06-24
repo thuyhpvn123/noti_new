@@ -1,0 +1,38 @@
+
+MYSQL_URL: "root:password@tcp(localhost:3306)/notification"
+API_PORT: ":8088"
+MetaNodeVersion: "0.0.1.0"
+DnsLink_: "http://rpc-proxy-sequoia.ibe.app:7080/api/dns/connection-address/"
+
+NodeConnectionAddress: "node" 
+ParentConnectionAddress: "rpc-proxy-sequoia.ibe.app:4200"
+ParentConnectionType: "client"
+ConnectionAddress_: "0x1eF5a8c5403c5aA1d43a8DC9eD391351012551Cf"
+ChainId: 991
+
+StorageAddress: "da7284faC5E804F8b9d71Aa39310f0f86776b51d"
+StorageConnectionAddress: "storage"
+
+ParentAddress: "f8d8ffea90386473317caba62db66c3cb047880b" 
+PrivateKey_: "3bb39dba2f00ec99c40f9475ce8f9e2cc46ed444d444dc82b0be3c779ba6dc5e"
+
+NotiFactoryABIPath: "../abi/notifactory.json"
+NotiFactoryAddress: "0x9b32613093eF68820151b121d7926fa931f517C1"
+
+NotiHubABIPath: "../abi/notihub.json"
+NotiHubAddress: "0x2883F00b97c3C46089Ff53AB1D37f3C67d18B4bA"
+
+NotificationProjectID: "metanode-t"
+NotificationCredential: "./config.json"
+
+PathLevelDB: "../db"
+
+APNSPath: "./authkey.p8"
+APNSProduction: false
+APNSMaxConcurrentPush: 100
+APNSKeyID: "68H2HVB6W9"
+APNSTeamID: "N93UU6R4YR"
+APNSTopic: "com.metanode.main"
+
+ServerPrivateKeyPath: "./private_key"
+RpcURL: "https://rpc-proxy-sequoia.ibe.app:8446"

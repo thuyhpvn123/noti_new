@@ -204,6 +204,12 @@ func (h *NotiHandler) handleUserSubscribed(event model.EventLog) {
 	fmt.Println("encryptedDeviceToken:", hex.EncodeToString(encryptedDeviceToken[16:]))
 	iv := encryptedDeviceToken[:16]
 	fmt.Println("iv la:", hex.EncodeToString(iv))
+	hashDeviceToken, ok := result["hashDeviceToken"].([32]byte)
+	if !ok {
+		logger.Error("fail in parse hashDeviceToken :", err)
+		return
+	}
+
 	deviceToken := model.DeviceToken{
 		DAppAddress:    dapp,
 		UserAddress:    user,
@@ -211,7 +217,9 @@ func (h *NotiHandler) handleUserSubscribed(event model.EventLog) {
 		EncryptedToken: hex.EncodeToString(encryptedDeviceToken[16:]),
 		Platform:       result["platform"].(uint8),
 		CreatedAt:      uint64(time.Now().Unix()),
+		HashDeviceToken:     hex.EncodeToString(hashDeviceToken[:]),
 	}
+	//get hash device from db. if existed inform error else create in db
 	histories, err := h.deviceTokenUsecase.GetEncryptedTokensByDappAndUser(dapp, user)
 	if err != nil {
 		logger.Error("fail in get Encrypted Token by dapp and user:", err)
@@ -227,19 +235,22 @@ func (h *NotiHandler) handleUserSubscribed(event model.EventLog) {
 		var count uint
 		for _, v := range histories {
 			if v.Platform == result["platform"].(uint8) {
-				count++
-				if v.EncryptedToken != hex.EncodeToString(encryptedDeviceToken[16:]) {
-					deviceToken.ID = v.ID
-					err = h.deviceTokenUsecase.Update(deviceToken)
-					if err != nil {
-						msg := fmt.Sprintf("Unable to update device token from user %s, %v", user, err)
-						logger.Error(msg)
-					}
+				if v.HashDeviceToken == hex.EncodeToString(hashDeviceToken[:]) {
+					count++
+					if v.EncryptedToken != hex.EncodeToString(encryptedDeviceToken[16:]) {
+						deviceToken.ID = v.ID
+						err = h.deviceTokenUsecase.Update(deviceToken)
+						if err != nil {
+							msg := fmt.Sprintf("Unable to update device token from user %s, %v", user, err)
+							logger.Error(msg)
+						}
 
-				} else {
-					logger.Error("same token device existed")
+					} else {
+						logger.Error("same token device existed")
+					}					
+					break
 				}
-				break
+
 			}
 		}
 		if count == 0 {

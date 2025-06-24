@@ -1,4 +1,3 @@
-config.yaml
 contracts/artifacts
 contracts/.states
 contracts/.prettierrc.json

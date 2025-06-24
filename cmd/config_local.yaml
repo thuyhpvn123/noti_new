@@ -1,0 +1,37 @@
+
+MYSQL_URL: "root:password@tcp(localhost:3306)/notification"
+API_PORT: ":8088"
+MetaNodeVersion: "0.0.1.0"
+DnsLink_: "http://127.0.0.1:7080/api/dns/connection-address/"
+
+ParentAddress: "f8d8ffea90386473317caba62db66c3cb047880b" 
+NodeConnectionAddress: "node" 
+ParentConnectionAddress: "0.0.0.0:4200"
+ParentConnectionType: "client"
+ConnectionAddress_: "0x1eF5a8c5403c5aA1d43a8DC9eD391351012551Cf"
+ChainId: 991
+
+StorageAddress: "da7284faC5E804F8b9d71Aa39310f0f86776b51d"
+StorageConnectionAddress: "storage"
+
+PrivateKey_: "3bb39dba2f00ec99c40f9475ce8f9e2cc46ed444d444dc82b0be3c779ba6dc5e"
+NotiFactoryABIPath: "../abi/notifactory.json"
+NotiFactoryAddress: "0x52030A6ff8A764Cf6E63Ee58d4FA1eAf9AaA3BCf"
+
+NotiHubABIPath: "../abi/notihub.json"
+NotiHubAddress: "0x8e82E18003DA10CC633c728f70248B8C93c86B64"
+
+NotificationProjectID: "metanode-t"
+NotificationCredential: "./config.json"
+
+PathLevelDB: "../db"
+
+APNSPath: "./authkey.p8"
+APNSProduction: false
+APNSMaxConcurrentPush: 100
+APNSKeyID: "68H2HVB6W9"
+APNSTeamID: "N93UU6R4YR"
+APNSTopic: "com.metanode.main"
+
+ServerPrivateKeyPath: "./private_key"
+RpcURL: "http://localhost:8545"

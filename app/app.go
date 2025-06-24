@@ -62,7 +62,7 @@ func NewApp(
 			PrivateKey_:             config.PrivateKey_,
 			ParentAddress:           config.ParentAddress,
 			ParentConnectionAddress: config.ParentConnectionAddress,
-			DnsLink_:                config.DnsLink(),
+			// DnsLink_:                config.DnsLink(),
 			ConnectionAddress_:      config.ConnectionAddress_,
 			ParentConnectionType:    config.ParentConnectionType,
 			ChainId:                 config.ChainId,

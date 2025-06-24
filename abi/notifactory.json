@@ -195,6 +195,12 @@
 				"internalType": "uint256",
 				"name": "createdAt",
 				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "hashDeviceToken",
+				"type": "bytes32"
 			}
 		],
 		"name": "UserSubscribed",
@@ -230,6 +236,62 @@
 		],
 		"name": "UserUnsubscribed",
 		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "dapp",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes",
+				"name": "encryptedDeviceToken",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum PlatformEnum",
+				"name": "platform",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "createdAt",
+				"type": "uint256"
+			}
+		],
+		"name": "UserUnsubscribedADevice",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "hashDeviceToken",
+				"type": "bytes32"
+			}
+		],
+		"name": "checkDeviceTOkenExist",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "existed",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -468,6 +530,30 @@
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "mUserToHashDeviceTokens",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "notiHub",
 		"outputs": [
@@ -552,6 +638,11 @@
 				"internalType": "enum PlatformEnum",
 				"name": "platform",
 				"type": "uint8"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "hashDeviceToken",
+				"type": "bytes32"
 			}
 		],
 		"name": "subscribeUser",
@@ -568,6 +659,29 @@
 			}
 		],
 		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "dappOwner",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "encryptedDeviceToken",
+				"type": "bytes"
+			},
+			{
+				"internalType": "enum PlatformEnum",
+				"name": "platform",
+				"type": "uint8"
+			}
+		],
+		"name": "unSubscribeADevice",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
