@@ -9,7 +9,15 @@ import (
 	"strings"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"golang.org/x/crypto/sha3"
+	"crypto/tls"
+	"time"
 )
+var insecureClient = &http.Client{
+	Timeout: 10 * time.Second,
+	Transport: &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	},
+}
 type LogParams struct { 
 	FromBlock string `json:"fromBlock" `
 	ToBlock string `json:"toBlock" `
@@ -68,7 +76,7 @@ func GetLogs(rpcURL, fromBlock, toBlock, contractAddress, topic0 string) ([]json
 		ID:      1,
 	}
 	data, _ := json.Marshal(req)
-	resp, err := http.Post(rpcURL, "application/json", bytes.NewBuffer(data))
+resp, err := insecureClient.Post(rpcURL, "application/json", bytes.NewBuffer(data))
 	if err != nil {
 		return nil, err
 	}
@@ -97,7 +105,7 @@ func GetLatestBlockNumber(rpcURL string) (string, error) {
 		 ID: 1, 
 	}
 	data, _ := json.Marshal(req)
-	resp, err := http.Post(rpcURL, "application/json", bytes.NewBuffer(data))
+resp, err := insecureClient.Post(rpcURL, "application/json", bytes.NewBuffer(data))
 	if err != nil {
 		return "", err
 	}
